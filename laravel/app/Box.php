@@ -15,8 +15,8 @@ class Box{
 		return array_shift($this->items);
 	}
 
-	public function startsWith($letters){
-		return array_filters($this->items, function ($item) use ($letter){
+	public function startsWith($letter){
+		return array_filter($this->items, function ($item) use ($letter){
 			return stripos($item, $letter) === 0;
 		});
 	}
